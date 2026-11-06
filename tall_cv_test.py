@@ -1,0 +1,11 @@
+from ultralytics import YOLO
+import cv2
+
+cap= cv2.VideoCapture('corriendo.mp4')
+while True:
+    ret, frame= cap.read()
+    cv2.imshow('Camara', frame)
+    if cv2.waitKey(1)==ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows() 
